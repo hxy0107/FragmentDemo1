@@ -14,9 +14,9 @@ public class ListFrag extends ListFragment {
     private Callbacks mCallbacks;
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-        mCallbacks.onItemSelected(BookContent.bookMap.get(position).id);
+    public void onListItemClick(ListView l, View v, int position, long ID) {
+        super.onListItemClick(l, v, position, ID);
+        mCallbacks.onItemSelected(BookContent.bookMap.get(position).ID);
     }
 
     public interface Callbacks
@@ -27,9 +27,9 @@ public class ListFrag extends ListFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        if(!(activity instanceof Callbacks)){
+  /*      if(!(activity instanceof Callbacks)){
             throw new IllegalStateException("onAttach");
-        }
+        }*/
         mCallbacks=(Callbacks)activity;
     }
 
